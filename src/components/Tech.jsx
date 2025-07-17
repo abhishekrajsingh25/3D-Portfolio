@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Tilt } from "react-tilt";
 
 import { motion } from "framer-motion";
@@ -11,6 +11,20 @@ import { technologies } from "../constants";
 import { SkillsInfo } from "../constants";
 
 const Tech = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(pointer: coarse)");
+    setIsMobile(mediaQuery.matches);
+
+    const handleChange = (e) => {
+      setIsMobile(e.matches);
+    };
+
+    mediaQuery.addEventListener("change", handleChange);
+    return () => mediaQuery.removeEventListener("change", handleChange);
+  }, []);
+
   return (
     <>
       <motion.div variants={textVariant()}>
@@ -24,18 +38,19 @@ const Tech = () => {
       </motion.div>
 
       <div className="flex flex-row flex-wrap justify-center gap-10">
-        {technologies.map((technology) => (
-          <div className="w-28 h-28" key={technology.name}>
-            <BallCanvas icon={technology.icon} />
-          </div>
-        ))}
+        {!isMobile &&
+          technologies.map((technology) => (
+            <div className="w-28 h-28" key={technology.name}>
+              <BallCanvas icon={technology.icon} />
+            </div>
+          ))}
       </div>
 
       <div className="flex flex-wrap gap-1 lg:gap-5 py-10 justify-between">
         {SkillsInfo.map((category) => (
           <div
             key={category.title}
-            className="bg-gray-900 backdrop-blur-md px-6 sm:px-10 py-8 sm:py-6 mb-10 w-full sm:w-[48%] rounded-2xl border border-purple-300 shadow-[0_0_20px_1px_rgba(130,69,236,0.3)] "
+            className="bg-gray-900 backdrop-blur-md px-6 sm:px-10 py-8 sm:py-6 mb-10 w-full sm:w-[48%] rounded-2xl bg-[#1d1836]"
           >
             <h3 className="text-2xl sm:text-3xl font-semibold text-gray-400 mb-4 text-center">
               {category.title}

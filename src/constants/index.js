@@ -16,9 +16,10 @@ import {
   figma,
   docker,
   internship,
-  carrent,
-  jobit,
-  tripguide,
+  graduate,
+  doctor,
+  blog,
+  chatapp,
   threejs,
   htmlLogo,
   cssLogo,
@@ -223,7 +224,7 @@ const education = [
   {
     title: "Bachelor of Technology - BTECH (Computer Science)",
     company_name: "GITA Autonomous College, Bhubaneswar",
-    icon: internship,
+    icon: graduate,
     iconBg: "#E6DEDD",
     date: "Nov 2022 - present",
     points: [
@@ -237,9 +238,9 @@ const education = [
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "Doctor Appointment Booking System",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "Developed a full-stack doctor booking app with MERN, featuring dashboards for doctors and admins.",
     tags: [
       {
         name: "react",
@@ -254,50 +255,54 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
+    image: doctor,
+    source_code_link: "https://github.com/abhishekrajsingh25/Prescripto-Doctor",
+    webapp: "https://prescripto-doctor-abhishek.vercel.app/",
   },
   {
-    name: "Job IT",
+    name: "Blog Application",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "restapi",
-        color: "green-text-gradient",
-      },
-      {
-        name: "scss",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: jobit,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Trip Guide",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "Built a full-stack blog app with Next.js, Prisma, and NeonDB, featuring SSR, secure auth with Clerk, and dynamic post management.",
     tags: [
       {
         name: "nextjs",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "postgresql",
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "prisma",
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    image: blog,
+    source_code_link: "https://github.com/abhishekrajsingh25/ByteCode-Blog-App",
+    webapp: "https://bytecode-blogapp-abhishekrajsingh.vercel.app/",
+  },
+  {
+    name: "Real Time Chat Application",
+    description:
+      "Built a real-time chat app with MERN and Socket.IO, featuring file sharing, read receipts, and a user-friendly interface.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "mongodb",
+        color: "green-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: chatapp,
+    source_code_link:
+      "https://github.com/abhishekrajsingh25/QuickChat-Chat-App",
+    webapp: "https://quickchat-chatapp-abhishek.vercel.app/",
   },
 ];
 

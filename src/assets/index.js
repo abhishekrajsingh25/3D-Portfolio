@@ -22,10 +22,11 @@ import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
 
 import internship from "./company/internship.png";
+import graduate from "./company/graduate.png";
 
-import carrent from "./carrent.png";
-import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
+import doctor from "./doctor.png";
+import blog from "./blog.png";
+import chatapp from "./chatapp.png";
 
 import htmlLogo from "./tech_logo/html.png";
 import cssLogo from "./tech_logo/css.png";
@@ -79,9 +80,10 @@ export {
   typescript,
   threejs,
   internship,
-  carrent,
-  jobit,
-  tripguide,
+  graduate,
+  doctor,
+  blog,
+  chatapp,
   htmlLogo,
   cssLogo,
   javascriptLogo,

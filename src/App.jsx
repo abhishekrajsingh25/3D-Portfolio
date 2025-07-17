@@ -1,4 +1,5 @@
 import { BrowserRouter } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
 
 import {
   About,
@@ -11,10 +12,12 @@ import {
   StarsCanvas,
 } from "./components";
 import Education from "./components/Education";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
     <BrowserRouter>
+      <ToastContainer />
       <div className="relative z-0 bg-primary">
         <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
           <Navbar />
@@ -29,6 +32,7 @@ const App = () => {
           <Contact />
           <StarsCanvas />
         </div>
+        <Footer />
       </div>
     </BrowserRouter>
   );

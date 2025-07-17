@@ -54,6 +54,16 @@ const About = () => {
         real-world problems. Let's work together to bring your ideas to life!
       </motion.p>
 
+      <motion.div variants={textVariant()} className="mt-5">
+        <motion.a
+          href="/resume.pdf"
+          download
+          className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-[#915eff] text-white font-semibold shadow-[0_0_15px_#915eff] hover:shadow-[0_0_25px_#915eff,0_0_50px_#915eff] hover:scale-105 transition duration-300"
+        >
+          Download Resume
+        </motion.a>
+      </motion.div>
+
       <div className="mt-20 flex flex-wrap gap-10">
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
