@@ -307,74 +307,74 @@ const projects = [
       "https://github.com/abhishekrajsingh25/expense_tracker_backend",
     webapp: "https://expense-tracker-abhishekrajsingh.vercel.app/",
   },
-  {
-    name: "Real Time Chat App",
-    description:
-      "Built a real-time chat app with MERN and Socket.IO, featuring file sharing, read receipts, and a user-friendly interface.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "mongodb",
-        color: "green-text-gradient",
-      },
-      {
-        name: "websockets",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: chatapp,
-    source_code_link:
-      "https://github.com/abhishekrajsingh25/QuickChat-Chat-App",
-    webapp: "https://quickchat-chatapp-abhishek.vercel.app/",
-  },
-  {
-    name: "Blog Application",
-    description:
-      "Built a full-stack blog app with Next.js, Prisma, and NeonDB, featuring SSR, secure auth with Clerk, and dynamic post management.",
-    tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "postgresql",
-        color: "green-text-gradient",
-      },
-      {
-        name: "prisma",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: blog,
-    source_code_link: "https://github.com/abhishekrajsingh25/ByteCode-Blog-App",
-    webapp: "https://bytecode-blogapp-abhishekrajsingh.vercel.app/",
-  },
-  {
-    name: "E-Commerce",
-    description:
-      "Developed a MERN-based e-commerce app with customer UI, admin panel, JWT auth, and Stripe/Razorpay integration.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "mongodb",
-        color: "green-text-gradient",
-      },
-      {
-        name: "tailwind",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: ecommerce,
-    source_code_link:
-      "https://github.com/abhishekrajsingh25/Forever_E-Commerce",
-    webapp: "https://forever-ecommerce-abhishekrajsingh.vercel.app/",
-  },
+  // {
+  //   name: "Real Time Chat App",
+  //   description:
+  //     "Built a real-time chat app with MERN and Socket.IO, featuring file sharing, read receipts, and a user-friendly interface.",
+  //   tags: [
+  //     {
+  //       name: "react",
+  //       color: "blue-text-gradient",
+  //     },
+  //     {
+  //       name: "mongodb",
+  //       color: "green-text-gradient",
+  //     },
+  //     {
+  //       name: "websockets",
+  //       color: "pink-text-gradient",
+  //     },
+  //   ],
+  //   image: chatapp,
+  //   source_code_link:
+  //     "https://github.com/abhishekrajsingh25/QuickChat-Chat-App",
+  //   webapp: "https://quickchat-chatapp-abhishek.vercel.app/",
+  // },
+  // {
+  //   name: "Blog Application",
+  //   description:
+  //     "Built a full-stack blog app with Next.js, Prisma, and NeonDB, featuring SSR, secure auth with Clerk, and dynamic post management.",
+  //   tags: [
+  //     {
+  //       name: "nextjs",
+  //       color: "blue-text-gradient",
+  //     },
+  //     {
+  //       name: "postgresql",
+  //       color: "green-text-gradient",
+  //     },
+  //     {
+  //       name: "prisma",
+  //       color: "pink-text-gradient",
+  //     },
+  //   ],
+  //   image: blog,
+  //   source_code_link: "https://github.com/abhishekrajsingh25/ByteCode-Blog-App",
+  //   webapp: "https://bytecode-blogapp-abhishekrajsingh.vercel.app/",
+  // },
+  // {
+  //   name: "E-Commerce",
+  //   description:
+  //     "Developed a MERN-based e-commerce app with customer UI, admin panel, JWT auth, and Stripe/Razorpay integration.",
+  //   tags: [
+  //     {
+  //       name: "react",
+  //       color: "blue-text-gradient",
+  //     },
+  //     {
+  //       name: "mongodb",
+  //       color: "green-text-gradient",
+  //     },
+  //     {
+  //       name: "tailwind",
+  //       color: "pink-text-gradient",
+  //     },
+  //   ],
+  //   image: ecommerce,
+  //   source_code_link:
+  //     "https://github.com/abhishekrajsingh25/Forever_E-Commerce",
+  //   webapp: "https://forever-ecommerce-abhishekrajsingh.vercel.app/",
+  // },
 ];
 
 export { services, technologies, experiences, education, projects };
