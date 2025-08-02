@@ -1,12 +1,27 @@
-# React + Vite
+<h1>My Portfolio </h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my Portfolio! This repository showcases my work and projects, highlighting my skills, experience, and areas of expertise.
 
-Currently, two official plugins are available:
+<h2>About Me</h2>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+👋 Hi there! I'm Abhishek Raj Singh, a Aspiring Software Engineer with a passion for web development. I enjoy crafting responsive web designs, exploring new technologies.
 
-## Expanding the ESLint configuration
+<li>🌱 Currently, I'm learning MERN Stack.</li>
+<li>💼 I am currently doing my B.Tech and exploring new technologies .</li>
+<li>💬 Ask me about Java, C++, DSA, OOPs.</li>
+<li>📫 How to reach me: abhishekrajsingh2509@gmail.com.</li>
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+<h2>How to use this Portfolio</h2>
+
+<li><b>Explore the Projects : </b>Navigate through the "Portfolio" section to see detailed descriptions, technologies used, and links to live demos or repositories.</li>
+<li><b>Check Out My Skills : </b>Visit the "Skills" section to understand the range of tools and languages I'm proficient in.</li>
+<li><b>Contact Me : </b>Feel free to reach out via the contact information provided above for collaboration, inquiries, or any other questions.</li>
+
+<h2>Contact Information</h2>
+
+<li><b>Email : </b>abhishekrajsingh2509@gmail.com</li>
+<li><b>Linkedin : </b><a href="https://www.linkedin.com/in/abhishek-raj-singh-731794239/" target="_blank" >Abhishek Raj Singh</a></li>
+
+<h2></h2>
+
+Thank you for visiting my portfolio. I hope you find my work interesting and valuable! To see the Portfolio Website, Click <a href="https://abhishekrajsingh.vercel.app" >Here</a>.
