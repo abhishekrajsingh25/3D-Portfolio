@@ -20,15 +20,11 @@ const ProjectCard = ({
   return (
     <motion.div
       variants={fadeIn("up", "spring", index * 0.5, 0.75)}
-      onClick={onOpenModal} // 🔗 Handle modal open
+      onClick={onOpenModal}
       className="cursor-pointer"
     >
       <Tilt
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
-        }}
+        options={{ max: 45, scale: 1, speed: 450 }}
         className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
       >
         <div className="relative w-full h-[230px]">
@@ -40,7 +36,10 @@ const ProjectCard = ({
 
           <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
             <div
-              onClick={() => window.open(source_code_link, "_blank")}
+              onClick={(e) => {
+                e.stopPropagation();
+                window.open(source_code_link, "_blank");
+              }}
               className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
             >
               <img
@@ -75,18 +74,13 @@ const ProjectCard = ({
 const Works = () => {
   const [selectedProject, setSelectedProject] = useState(null);
 
-  const handleOpenModal = (project) => {
-    setSelectedProject(project);
-  };
-
-  const handleCloseModal = () => {
-    setSelectedProject(null);
-  };
+  const handleOpenModal = (project) => setSelectedProject(project);
+  const handleCloseModal = () => setSelectedProject(null);
 
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} `}>My work</p>
+        <p className={`${styles.sectionSubText}`}>My work</p>
         <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
       </motion.div>
 
@@ -95,11 +89,11 @@ const Works = () => {
           variants={fadeIn("", "", 0.1, 1)}
           className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
         >
-          Following projects showcases my skills and experience through
+          Following projects showcase my skills and experience through
           real-world examples of my work. Each project is briefly described with
-          links to code repositories and live demos in it. It reflects my
-          ability to solve complex problems, work with different technologies,
-          and manage projects effectively.
+          links to code repositories and live demos. It reflects my ability to
+          solve complex problems, work with different technologies, and manage
+          projects effectively.
         </motion.p>
       </div>
 
@@ -114,95 +108,73 @@ const Works = () => {
         ))}
       </div>
 
-      {/* Modal Container */}
+      {/* Modal */}
       {selectedProject && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-90 p-4"
-          onClick={handleCloseModal} // allow background click to close
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80 p-4"
+          onClick={handleCloseModal}
         >
           <div
-            className="bg-gray-900 rounded-xl shadow-2xl w-full max-w-3xl relative"
-            onClick={(e) => e.stopPropagation()} // prevent modal close on click inside
+            className="bg-gray-900 rounded-xl shadow-2xl w-11/12 sm:w-3/5 max-w-lg relative"
+            onClick={(e) => e.stopPropagation()}
           >
             {/* Close Button */}
             <button
               onClick={handleCloseModal}
-              className="absolute top-4 right-4 text-white text-3xl font-bold hover:text-purple-500 z-50"
+              className="absolute top-1 right-4 text-purple-500 text-3xl font-bold hover:text-purple-400 z-50"
               aria-label="Close"
             >
               &times;
             </button>
 
             {/* Modal Content */}
-            {selectedProject && (
-              <div
-                className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80 p-4"
-                onClick={handleCloseModal}
-              >
-                <div
-                  className="bg-gray-900 rounded-xl shadow-2xl w-11/12 sm:w-3/5 max-w-lg relative"
-                  onClick={(e) => e.stopPropagation()} // Prevent close when clicking inside modal
-                >
-                  {/* ✖ Close Button */}
-                  <button
-                    onClick={handleCloseModal}
-                    className="absolute top-1 right-4 text-purple-500 text-3xl font-bold hover:text-purple-400 z-50"
-                    aria-label="Close"
-                  >
-                    &times;
-                  </button>
-
-                  {/* Modal Content */}
-                  <div className="flex flex-col p-6 mt-3">
-                    <div className="w-full flex justify-center mb-4">
-                      <img
-                        src={selectedProject.image}
-                        alt={selectedProject.name}
-                        className="w-full h-48 object-cover rounded-md"
-                      />
-                    </div>
-
-                    <h3 className="text-xl font-bold text-white mb-2 text-center">
-                      {selectedProject.name}
-                    </h3>
-
-                    <p className="text-gray-400 text-sm mb-4 text-center">
-                      {selectedProject.description}
-                    </p>
-
-                    <div className="flex flex-wrap justify-center gap-2 mb-4">
-                      {selectedProject.tags.map((tag, index) => (
-                        <span
-                          key={index}
-                          className={`text-xs font-semibold rounded-full px-2 py-1 ${tag.color}`}
-                        >
-                          #{tag.name}
-                        </span>
-                      ))}
-                    </div>
-
-                    <div className="flex gap-4 justify-center">
-                      <a
-                        href={selectedProject.source_code_link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="bg-gray-800 hover:bg-purple-800 text-gray-300 px-4 py-2 rounded-md text-sm font-medium"
-                      >
-                        View Code
-                      </a>
-                      <a
-                        href={selectedProject.webapp}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="bg-purple-600 hover:bg-purple-800 text-white px-4 py-2 rounded-md text-sm font-medium"
-                      >
-                        View Live
-                      </a>
-                    </div>
-                  </div>
-                </div>
+            <div className="flex flex-col p-6 mt-3">
+              <div className="w-full flex justify-center mb-4">
+                <img
+                  src={selectedProject.image}
+                  alt={selectedProject.name}
+                  className="w-full h-48 object-cover rounded-md"
+                />
               </div>
-            )}
+
+              <h3 className="text-xl font-bold text-white mb-2 text-center">
+                {selectedProject.name}
+              </h3>
+
+              <p className="text-gray-400 text-sm mb-4 text-center">
+                {selectedProject.description}
+              </p>
+
+              <div className="flex flex-wrap justify-center gap-2 mb-4">
+                {selectedProject.tags.map((tag, index) => (
+                  <span
+                    key={index}
+                    className={`text-xs font-semibold rounded-full px-2 py-1 ${tag.color}`}
+                  >
+                    #{tag.name}
+                  </span>
+                ))}
+              </div>
+
+              <div className="flex gap-4 justify-center">
+                <a
+                  href={selectedProject.source_code_link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-gray-800 hover:bg-purple-800 text-gray-300 px-4 py-2 rounded-md text-sm font-medium"
+                >
+                  View Code
+                </a>
+                <a
+                  href={selectedProject.webapp}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-purple-600 hover:bg-purple-800 text-white px-4 py-2 rounded-md text-sm font-medium"
+                >
+                  View Live
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       )}

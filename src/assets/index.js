@@ -25,8 +25,11 @@ import internship from "./company/internship.png";
 import graduate from "./company/graduate.png";
 
 import doctor from "./doctor.png";
+import school from "./school.png";
+import expensetracker from "./expensetracker.png";
 import blog from "./blog.png";
 import chatapp from "./chatapp.png";
+import ecommerce from "./ecommerce.png";
 
 import htmlLogo from "./tech_logo/html.png";
 import cssLogo from "./tech_logo/css.png";
@@ -82,8 +85,11 @@ export {
   internship,
   graduate,
   doctor,
+  school,
+  expensetracker,
   blog,
   chatapp,
+  ecommerce,
   htmlLogo,
   cssLogo,
   javascriptLogo,

@@ -18,8 +18,11 @@ import {
   internship,
   graduate,
   doctor,
+  school,
+  expensetracker,
   blog,
   chatapp,
+  ecommerce,
   threejs,
   htmlLogo,
   cssLogo,
@@ -240,7 +243,7 @@ const projects = [
   {
     name: "Doctor Appointment Booking System",
     description:
-      "Developed a full-stack doctor booking app with MERN, featuring dashboards for doctors and admins.",
+      "Developed a full-stack doctor booking app with MERN, featuring dashboards for doctors and admins to manage appointments and schedules.",
     tags: [
       {
         name: "react",
@@ -258,6 +261,74 @@ const projects = [
     image: doctor,
     source_code_link: "https://github.com/abhishekrajsingh25/Prescripto-Doctor",
     webapp: "https://prescripto-doctor-abhishek.vercel.app/",
+  },
+  {
+    name: "School Dashboard Management System",
+    description:
+      "Developed a full-stack school management app with Next.js, featuring role-based dashboards and modules for attendance, and timetables.",
+    tags: [
+      {
+        name: "nextjs",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "postgresql",
+        color: "green-text-gradient",
+      },
+      {
+        name: "prisma",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: school,
+    source_code_link: "https://github.com/abhishekrajsingh25/Schooldesk-School",
+    webapp: "https://schooldesk-school-abhishekrajsingh.vercel.app/",
+  },
+  {
+    name: "Expense Tracker Application",
+    description:
+      "Developed a full-stack expense tracker with React, Spring Boot, and PostgreSQL, featuring category-based tracking, charts, Excel exports, email reports and JWT-based auth.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "springboot",
+        color: "green-text-gradient",
+      },
+      {
+        name: "mysql",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: expensetracker,
+    source_code_link:
+      "https://github.com/abhishekrajsingh25/expense_tracker_backend",
+    webapp: "https://expense-tracker-abhishekrajsingh.vercel.app/",
+  },
+  {
+    name: "Real Time Chat App",
+    description:
+      "Built a real-time chat app with MERN and Socket.IO, featuring file sharing, read receipts, and a user-friendly interface.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "mongodb",
+        color: "green-text-gradient",
+      },
+      {
+        name: "websockets",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: chatapp,
+    source_code_link:
+      "https://github.com/abhishekrajsingh25/QuickChat-Chat-App",
+    webapp: "https://quickchat-chatapp-abhishek.vercel.app/",
   },
   {
     name: "Blog Application",
@@ -282,9 +353,9 @@ const projects = [
     webapp: "https://bytecode-blogapp-abhishekrajsingh.vercel.app/",
   },
   {
-    name: "Real Time Chat Application",
+    name: "E-Commerce",
     description:
-      "Built a real-time chat app with MERN and Socket.IO, featuring file sharing, read receipts, and a user-friendly interface.",
+      "Developed a MERN-based e-commerce app with customer UI, admin panel, JWT auth, and Stripe/Razorpay integration.",
     tags: [
       {
         name: "react",
@@ -299,10 +370,10 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: chatapp,
+    image: ecommerce,
     source_code_link:
-      "https://github.com/abhishekrajsingh25/QuickChat-Chat-App",
-    webapp: "https://quickchat-chatapp-abhishek.vercel.app/",
+      "https://github.com/abhishekrajsingh25/Forever_E-Commerce",
+    webapp: "https://forever-ecommerce-abhishekrajsingh.vercel.app/",
   },
 ];
 
